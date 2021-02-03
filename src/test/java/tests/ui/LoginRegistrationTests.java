@@ -1,5 +1,7 @@
 package tests.ui;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -9,6 +11,8 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
+@Feature("UI")
+@Story("Login and registration")
 public class LoginRegistrationTests extends TestBase {
 
     @Test

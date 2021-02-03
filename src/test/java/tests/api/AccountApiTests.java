@@ -1,5 +1,7 @@
 package tests.api;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.DisplayName;
@@ -9,6 +11,8 @@ import tests.api.models.AccountData;
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@Feature("API")
+@Story("Account requests")
 public class AccountApiTests {
     final String url = System.getProperty("api.url");
 
