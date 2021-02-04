@@ -26,42 +26,42 @@ public class AccountApiTests {
         final String uid = System.getProperty("api.uid");
 
         final String body = "{\"operationName\":\"GetUserInfo\",\"variables\":{\"uid\":\"" + uid + "\",\"sid\":\"" + sid + "\"}," +
-                "\"query\":\"query GetUserInfo($uid: String!, $sid: String!) {\\n" +
-                "  getUserInfo(uid: $uid, sid: $sid) {\\n" +
-                "    user {\\n" +
-                "      auser_id\\n" +
-                "      display_name\\n" +
-                "      email\\n" +
-                "      phone\\n" +
-                "      roles {\\n" +
-                "        is_admin\\n" +
-                "        is_moderator\\n" +
-                "        is_federator\\n" +
-                "        is_super_federator\\n" +
-                "        has_organizations\\n" +
-                "        organization_tree {\\n" +
-                "          organization_id\\n" +
-                "          parent_organization1_id\\n" +
-                "          sport_type\\n" +
-                "          level\\n" +
-                "          __typename\\n" +
-                "        }\\n" +
-                "        __typename\\n" +
-                "      }\\n" +
-                "      __typename\\n" +
-                "    }\\n" +
-                "    self {\\n" +
-                "      auser_id\\n" +
-                "      roles {\\n" +
-                "        is_admin\\n" +
-                "        is_moderator\\n" +
-                "        __typename\\n" +
-                "      }\\n" +
-                "      __typename\\n" +
-                "    }\\n" +
-                "    __typename\\n" +
-                "  }\\n" +
-                "}\\n" +
+                "\"query\":\"query GetUserInfo($uid: String!, $sid: String!) { " +
+                "  getUserInfo(uid: $uid, sid: $sid) { " +
+                "    user { " +
+                "      auser_id " +
+                "      display_name " +
+                "      email " +
+                "      phone " +
+                "      roles { " +
+                "        is_admin " +
+                "        is_moderator " +
+                "        is_federator " +
+                "        is_super_federator " +
+                "        has_organizations " +
+                "        organization_tree { " +
+                "          organization_id " +
+                "          parent_organization1_id " +
+                "          sport_type " +
+                "          level " +
+                "          __typename " +
+                "        } " +
+                "        __typename " +
+                "      } " +
+                "      __typename " +
+                "    } " +
+                "    self { " +
+                "      auser_id " +
+                "      roles { " +
+                "        is_admin " +
+                "        is_moderator " +
+                "        __typename " +
+                "      } " +
+                "      __typename " +
+                "    } " +
+                "    __typename " +
+                "  } " +
+                "} " +
                 "\"}";
 
         AccountData response = given()

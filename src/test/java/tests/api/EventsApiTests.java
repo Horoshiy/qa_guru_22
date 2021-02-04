@@ -27,82 +27,82 @@ public class EventsApiTests {
                 "\"filter\":{\"dates\":\"now_and_future\"}}," +
                 "\"query\":\"query GetAllEvents($first: Int, $after: Int, $sport_id: Int, $calendar_id: ID, $filter: EventsListFilter) {\\n" +
                 "  events(first: $first, after: $after, sport_id: $sport_id, calendar_id: $calendar_id, filter: $filter) {\\n" +
-                "    ...EventsList\\n" +
-                "    __typename\\n" +
-                "  }\\n" +
-                "}\\n" +
-                "\\n" +
-                "fragment EventsList on EventConnection {\\n" +
-                "  edges {\\n" +
-                "    id\\n" +
-                "    name\\n" +
-                "    deleted\\n" +
-                "    canceled\\n" +
-                "    count_regions\\n" +
-                "    count_sportsmen\\n" +
-                "    region_id\\n" +
-                "    white_list\\n" +
-                "    status\\n" +
-                "    shared_link\\n" +
-                "    show_ath_list\\n" +
-                "    sport_type {\\n" +
-                "      id\\n" +
-                "      federation_filter\\n" +
-                "      title\\n" +
-                "      __typename\\n" +
-                "    }\\n" +
-                "    avatar {\\n" +
-                "      id\\n" +
-                "      uri\\n" +
-                "      __typename\\n" +
-                "    }\\n" +
-                "    calendar_logo {\\n" +
-                "      id\\n" +
-                "      uri\\n" +
-                "      __typename\\n" +
-                "    }\\n" +
-                "    region {\\n" +
-                "      id\\n" +
-                "      display_name\\n" +
-                "      __typename\\n" +
-                "    }\\n" +
-                "    title\\n" +
-                "    dt_start\\n" +
-                "    dt_end\\n" +
-                "    app_info {\\n" +
-                "      id\\n" +
-                "      dt_end\\n" +
-                "      dt_start\\n" +
-                "      closed\\n" +
-                "      user_can_apply\\n" +
-                "      payment_button_title\\n" +
-                "      reg_type\\n" +
-                "      reg_link\\n" +
-                "      app_from_schools\\n" +
-                "      __typename\\n" +
-                "    }\\n" +
-                "    disciplines {\\n" +
-                "      id\\n" +
-                "      title\\n" +
-                "      short_title\\n" +
-                "      ranks {\\n" +
-                "        id\\n" +
-                "        title\\n" +
-                "        short_title\\n" +
-                "        __typename\\n" +
-                "      }\\n" +
-                "      __typename\\n" +
-                "    }\\n" +
-                "    responsible {\\n" +
-                "      is_responsible\\n" +
-                "      __typename\\n" +
-                "    }\\n" +
-                "    __typename\\n" +
-                "  }\\n" +
-                "  total\\n" +
-                "  filtered_total\\n" +
-                "  __typename\\n" +
-                "}\\n" +
+                "    ...EventsList " +
+                "    __typename " +
+                "  } " +
+                "} " +
+                " " +
+                "fragment EventsList on EventConnection { " +
+                "  edges { " +
+                "    id " +
+                "    name " +
+                "    deleted " +
+                "    canceled " +
+                "    count_regions " +
+                "    count_sportsmen " +
+                "    region_id " +
+                "    white_list " +
+                "    status " +
+                "    shared_link " +
+                "    show_ath_list " +
+                "    sport_type { " +
+                "      id " +
+                "      federation_filter " +
+                "      title " +
+                "      __typename " +
+                "    } " +
+                "    avatar { " +
+                "      id " +
+                "      uri " +
+                "      __typename " +
+                "    } " +
+                "    calendar_logo { " +
+                "      id " +
+                "      uri " +
+                "      __typename " +
+                "    } " +
+                "    region { " +
+                "      id " +
+                "      display_name " +
+                "      __typename " +
+                "    } " +
+                "    title " +
+                "    dt_start " +
+                "    dt_end " +
+                "    app_info { " +
+                "      id " +
+                "      dt_end " +
+                "      dt_start " +
+                "      closed " +
+                "      user_can_apply " +
+                "      payment_button_title " +
+                "      reg_type " +
+                "      reg_link " +
+                "      app_from_schools " +
+                "      __typename " +
+                "    } " +
+                "    disciplines { " +
+                "      id " +
+                "      title " +
+                "      short_title " +
+                "      ranks { " +
+                "        id " +
+                "        title " +
+                "        short_title " +
+                "        __typename " +
+                "      } " +
+                "      __typename " +
+                "    } " +
+                "    responsible { " +
+                "      is_responsible " +
+                "      __typename " +
+                "    } " +
+                "    __typename " +
+                "  } " +
+                "  total " +
+                "  filtered_total " +
+                "  __typename " +
+                "} " +
                 "\"}";
 
         EventData response = given()
