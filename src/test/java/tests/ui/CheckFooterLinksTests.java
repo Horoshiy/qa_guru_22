@@ -3,8 +3,9 @@ package tests.ui;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import ru.sportvokrug.allure.Layer;
+import annotations.Layer;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.by;
@@ -14,19 +15,20 @@ import static io.qameta.allure.Allure.step;
 @Layer("web")
 @Feature("links")
 @Story("Footer links")
+@Tag("web")
 public class CheckFooterLinksTests extends TestBase {
     final String homePage = System.getProperty("site.url");
 
     @Test
-    @DisplayName("check terms link")
+    @DisplayName("Check terms link")
     void checkTermsLinkTest() {
         final String title = "СОГЛАШЕНИЕ О ПРЕДОСТАВЛЕНИИ ДОСТУПА К САЙТУ";
-        step("open site", () -> {
+        step("Open site", () -> {
             open(homePage);
             $("#logo").shouldHave(text("спорт"));
         });
 
-        step("click on terms link", () -> {
+        step("Click on terms link", () -> {
             $(by("href", "/terms/")).click();
             switchTo().window(1);
             $("#content").shouldHave(text(title));
@@ -34,15 +36,15 @@ public class CheckFooterLinksTests extends TestBase {
     }
 
     @Test
-    @DisplayName("check offer link")
+    @DisplayName("Check offer link")
     void checkOfferLinkTest() {
         final String title = "ДОГОВОР НА ОРГАНИЗАЦИЮ МЕРОПРИЯТИЯ";
-        step("open site", () -> {
+        step("Open site", () -> {
             open(homePage);
             $("#logo").shouldHave(text("спорт"));
         });
 
-        step("click on offer link", () -> {
+        step("Click on offer link", () -> {
             $(by("href", "/offer/")).click();
             switchTo().window(1);
             $("#content").shouldHave(text(title));
@@ -50,15 +52,15 @@ public class CheckFooterLinksTests extends TestBase {
     }
 
     @Test
-    @DisplayName("contract agent link")
+    @DisplayName("Contract agent link")
     void checkContractAgentLinkTest() {
         final String title = "АГЕНТСКИЙ ДОГОВОР";
-        step("open site", () -> {
+        step("Open site", () -> {
             open(homePage);
             $("#logo").shouldHave(text("спорт"));
         });
 
-        step("click on offer link", () -> {
+        step("Click on offer link", () -> {
             $(by("href", "/contract-agent/")).click();
             switchTo().window(title);
             $("#content").shouldHave(text(title));
@@ -66,15 +68,15 @@ public class CheckFooterLinksTests extends TestBase {
     }
 
     @Test
-    @DisplayName("info link")
+    @DisplayName("Info link")
     void checkInfoLinkTest() {
         final String title = "Информация";
-        step("open site", () -> {
+        step("Open site", () -> {
             open(homePage);
             $("#logo").shouldHave(text("спорт"));
         });
 
-        step("click on info link", () -> {
+        step("Click on info link", () -> {
             $(by("href", "/info/")).click();
             switchTo().window(title);
             $("#content").shouldHave(text(title));
@@ -85,12 +87,12 @@ public class CheckFooterLinksTests extends TestBase {
     @DisplayName("projects link")
     void checkProjectsLinkTest() {
         final String title = "Наши проекты";
-        step("open site", () -> {
+        step("Open site", () -> {
             open(homePage);
             $("#logo").shouldHave(text("спорт"));
         });
 
-        step("click on projects link", () -> {
+        step("Click on projects link", () -> {
             $(by("href", "/projects/")).click();
             switchTo().window(title());
             $("#content").shouldHave(text(title));

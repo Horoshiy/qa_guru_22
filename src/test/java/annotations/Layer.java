@@ -1,4 +1,4 @@
-package ru.sportvokrug.allure;
+package annotations;
 
 import io.qameta.allure.LabelAnnotation;
 

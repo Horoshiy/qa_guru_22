@@ -9,4 +9,4 @@
 2. Запрос на все мероприятия
 
 Стэк технологий:
-Gradle, JunitSelenide, Selenoid, Allure TestOps, Gradle, JUnit5, Jenkins, Rest-Assured, Telegram Bot
+Java, Gradle, Junit5, Selenide, Rest-Assured, Allure Reports, Allure TestOps, Jenkins, Selenoid, Telegram Bot, Jira.

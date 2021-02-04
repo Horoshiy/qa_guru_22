@@ -4,8 +4,9 @@ import io.qameta.allure.AllureId;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import ru.sportvokrug.allure.Layer;
+import annotations.Layer;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -17,6 +18,7 @@ import static io.qameta.allure.Allure.step;
 @Layer("web")
 @Feature("register")
 @Story("Login and registration")
+@Tag("web")
 public class LoginRegistrationTests extends TestBase {
 
     @Test
