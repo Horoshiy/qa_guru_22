@@ -26,7 +26,7 @@ public class SportTrendsHomePageLinksTests extends TestBase {
         });
 
         step("open link", () -> {
-            $("#sport-types-list").$(byText(sport)).parent().click();
+            $$(".sport-type").findBy(text(sport)).preceding(1).click();
             $("main div").shouldHave(text(sport));
         });
     }
