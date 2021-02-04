@@ -7,6 +7,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import ru.sportvokrug.allure.Layer;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
@@ -25,7 +26,7 @@ public class SportTrendsHomePageLinksTests extends TestBase {
         });
 
         step("open link", () -> {
-            $x("//div[contains(@class, 'sport-type') and descendant::p[contains(text(), " + sport + ")]]").parent().click();
+            $(".sport-type").find(byText(sport)).parent().click();
             $("main div").shouldHave(text(sport));
         });
     }
