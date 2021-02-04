@@ -6,12 +6,14 @@ import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import ru.sportvokrug.allure.Layer;
 import tests.api.models.AccountData;
 
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@Feature("API")
+@Layer("rest")
+@Feature("register")
 @Story("Account requests")
 public class AccountApiTests {
     final String url = System.getProperty("api.url");
