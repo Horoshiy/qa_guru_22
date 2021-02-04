@@ -48,7 +48,7 @@ public class LoginRegistrationTests extends TestBase {
 
     @Test
     @AllureId("1542")
-    @DisplayName("Регистрация на сайте")
+    @DisplayName("Site registration")
     void registration() {
         final String url = System.getProperty("site.url");
         final String name = System.getProperty("site.user");
@@ -56,22 +56,22 @@ public class LoginRegistrationTests extends TestBase {
         final String firstName = "Иван";
         final String lastName = "Иванов";
 
-        step("Открыть сайт", () -> {
+        step("Open site", () -> {
             open(url);
             $("#logo").shouldHave(text("спорт"));
         });
 
-        step("Нажать по ссылке вход/регистрация", () -> {
+        step("Click on login link", () -> {
             $(".alter_login").click();
             $(".inner_auth_popup").shouldHave(text("Пожалуйста, авторизуйтесь"));
         });
 
-        step("Перейти по ссылке Зарегистрироваться", () -> {
+        step("Click on register link", () -> {
            $("a.change_template").click();
            $("#auth_email_regustration").shouldBe(visible);
         });
 
-        step("Заполнить форму", () -> {
+        step("Fill fields and press submit button", () -> {
             $(byName("auth.email")).val(name);
             $(byName("auth.passwd")).val(password);
             $(byName("auth.first_name")).val(firstName);
