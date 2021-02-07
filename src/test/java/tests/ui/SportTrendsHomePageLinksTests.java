@@ -1,5 +1,6 @@
 package tests.ui;
 
+import annotations.JiraIssue;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.Tag;
@@ -17,6 +18,7 @@ import static io.qameta.allure.Allure.step;
 @Story("Home page Sport Trends")
 @Tag("web")
 public class SportTrendsHomePageLinksTests extends TestBase {
+    @JiraIssue("QC3-1")
     @ParameterizedTest
     @ValueSource(strings = {"фигурн", "велоспорт", "легк", "кроссфит", "художественн", "воркаут", "лыжн", "конн", "акробатическ"})
     void checkSportEventsLinks(String sport) {
