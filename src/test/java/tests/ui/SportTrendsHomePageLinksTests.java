@@ -21,9 +21,8 @@ import static io.qameta.allure.Allure.step;
 @Tag("web")
 public class SportTrendsHomePageLinksTests extends TestBase {
     @JiraIssue("QC3-1")
-    @ParameterizedTest
+    @ParameterizedTest(name = "Check links to events from sports by regexp {index}")
     @ValueSource(strings = {"фигурн", "велоспорт", "легк", "кроссфит", "художественн", "воркаут", "лыжн", "конн", "акробатическ"})
-    @DisplayName("Check links to events from sports")
     void checkSportEventsLinks(String sport) {
         final String url = System.getProperty("site.url");
         parameter("event", sport);
