@@ -11,6 +11,7 @@ import annotations.Layer;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
+import static io.qameta.allure.Allure.parameter;
 import static io.qameta.allure.Allure.step;
 
 @Layer("web")
@@ -23,6 +24,7 @@ public class SportTrendsHomePageLinksTests extends TestBase {
     @ValueSource(strings = {"фигурн", "велоспорт", "легк", "кроссфит", "художественн", "воркаут", "лыжн", "конн", "акробатическ"})
     void checkSportEventsLinks(String sport) {
         final String url = System.getProperty("site.url");
+        parameter("event", sport);
 
         step("Open site", () -> {
             open(url);
