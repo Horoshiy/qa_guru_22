@@ -12,7 +12,7 @@
 Java, Gradle, Junit5, Selenide, Rest-Assured, Allure Reports, Allure TestOps, Jenkins, Selenoid, Telegram Bot, Jira.
 
 ### Скриншоты
-**Jira**
+**Jenkins**
 ![Jenkins job](https://user-images.githubusercontent.com/6183943/107414128-a23e8b00-6b22-11eb-91a9-4e88da610930.png)
 
 **Allure Report**
